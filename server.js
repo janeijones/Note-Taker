@@ -5,8 +5,11 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
-//sets up express application to handle data parsing
+//sets up express app to handle data parsing
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
+
+//starts server to begin listening
+app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
 
 
